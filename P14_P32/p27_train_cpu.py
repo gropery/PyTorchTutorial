@@ -51,7 +51,7 @@ for i in range(epoch):
     # 训练步骤开始
     mymodule.train()  # 对某些网络层有效 eg: Dropout,BatchNorm
     for data in train_dataloader:
-        start_time = time.time()
+        # start_time = time.time()
         imgs, targets = data
         outputs = mymodule(imgs)
         loss = loss_fn(outputs, targets)
