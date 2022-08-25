@@ -40,7 +40,7 @@ train_dataloader = DataLoader(train_data, batch_size=64)
 test_dataloader = DataLoader(test_data, batch_size=64)
 
 
-# 搭建神经网络
+# 搭建CIFAR10神经网络
 class MyModule(nn.Module):
     def __init__(self):
         super(MyModule, self).__init__()
@@ -112,7 +112,7 @@ for i in range(epoch):
             print('训练次数: {}, Loss: {}'.format(total_tran_step, loss.item()))
             writer.add_scalar('train_loss', loss.item(), total_tran_step)
 
-    # 测试步骤开始
+    # 验证步骤开始
     mymodule.eval()  # 对某些网络有效 eg: Dropout,BatchNorm
     total_test_loss = 0
     total_accuracy = 0

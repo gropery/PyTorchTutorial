@@ -2,9 +2,9 @@ from PIL import Image
 from torch.utils.tensorboard import SummaryWriter
 from torchvision import transforms
 
-img_path = 'dataset/train/ants/0013035.jpg'
+img_path = 'data/train/ants_image/0013035.jpg'
 img = Image.open(img_path)
-
+print(type(img))
 
 writer = SummaryWriter('logs')
 

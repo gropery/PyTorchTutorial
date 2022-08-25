@@ -22,9 +22,9 @@ class MyData(Dataset):
         return len(self.img_path)
 
 
-root_dir = 'dataset/train'
-ants_label_dir = 'ants'
-bees_label_dir = 'bees'
+root_dir = 'data/train'
+ants_label_dir = 'ants_image'
+bees_label_dir = 'bees_image'
 ants_dataset = MyData(root_dir, ants_label_dir)
 bees_dataset = MyData(root_dir, bees_label_dir)
 train_dataset = ants_dataset + bees_dataset
@@ -32,5 +32,6 @@ print(len(ants_dataset))
 print(len(bees_dataset))
 print(len(train_dataset))
 
-# img, label = ants_dataset[0]
+img, label = ants_dataset[0]
+print(type(img))
 # img.show()
